@@ -1,6 +1,7 @@
 from flask import Flask, render_template, flash, request, redirect, url_for, session
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 import sendgrid
+import os
 
 users = 0
 
@@ -43,11 +44,11 @@ def index():
 '''@app.errorhandler(404)
 def not_found(e):
 	return render_template("404.html")
-
+'''
 
 @app.errorhandler(500)
 def application_error(e):
-	return 'Sorry, unexpected error: {}'.format(e), 500'''
+	return 'Sorry, unexpected error: {}'.format(e), 500
 
 if(__name__ == "__main__"):
 	app.run(debug=True)
