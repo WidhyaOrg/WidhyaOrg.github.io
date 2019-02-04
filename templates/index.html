@@ -1,147 +1,712 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+	<div id="widhya-page">
+		<div class="container-wrap">
+		<a href="#" class="js-widhya-nav-toggle widhya-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="widhya-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(static/images/about.jpg);"></div>
+				<h1 id="widhya-logo" style="color:#f9bf3f;">Widhya</h1>
+				<span class="position" style="color:white;">Working To Change The Learning Methodology in India</span>
+			</div>
+			<nav id="widhya-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home" style="color:#f9bf3f;">Home</a></li>
+						<li><a href="#" data-nav-section="about" style="color:#f9bf3f;">About</a></li>
+						<!--<li><a href="#" data-nav-section="services" style="color:#f9bf3f;">Our Values</a></li>-->
+						<li><a href="#" data-nav-section="skills" style="color:#f9bf3f;">Skills</a></li>
+						<li><a href="#" data-nav-section="education" style="color:#f9bf3f;">Education</a></li>
+						<li><a href="#" data-nav-section="experience" style="color:#f9bf3f;">Experience</a></li>
+						<li><a href="#" data-nav-section="work" style="color:#f9bf3f;">Work</a></li>
+						<!--<li><a href="#" data-nav-section="blog" style="color:#f9bf3f;">Blog</a></li>-->
+						<li><a href="#" data-nav-section="contact" style="color:#f9bf3f;">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
 
-	<section class="countdown">
-		<p id="timer"></p>
-	</section>
+			<div class="widhya-footer">
+				<p><small> <!-- Link back to widhya can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+				</small></p>
+				<ul>
+					<li><a href="https://www.facebook.com/Widhya.Org"><i class="icon-facebook2"></i></a></li>
+					<li><a href="https://www.twitter.com/Widhya75433869"><i class="icon-twitter2"></i></a></li>
+					<li><a href="https://www.instagram.com/widhya_org"><i class="icon-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/widhya"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
 
-	<div class="container-white">
-		<div class="column-left">
-			<br><br><img src="{{ url_for('static',filename='intro.jpg') }}">
-		</div>
-		<div class="column-right">
-			<center><h1>What is Widhya?</h1></center>
-			<span class ="lead">The kingdom of knowledge has kicked off a path of an ideological renaissance, with numerous teaching and learning techniques. We believe in creating a symbiosis of education and technology which brings up the augment ordinary teaching and learning skills to new pinnacles.<br><br>
-We provide a platform for young talents to showcase their skills, network with the and create opportunities with an identity to be recognized by the well established personalities of industries and to create a portal for an epitome of diverse skills. It’s no secret that internships are the most effective way for students to gain exposure before
-graduation and kick start their careers.<br><br>
-At Widhya, we aim towards building a unique platform bringing students and employers
-together under one roof, helping employers find grassroots of their companies by choosing
-students. Our core focus is to remove the concept of rote learning, enabling students to focus on
-learning by doing and help recruiters find the real cream from the pool of talent, trying to
-solve the near failure of India's education system.<br/><br/>
-			</span>
-		</div>
-	</div>
-	<div class="container-black">
-		<div class="column-left-2">
-			<center><h1>Widhya For Students</h1></center><br>
-			<span class="lead">Do you want to get recognized in this competitive world?<br>
-Do you want to be ahead of everyone and get the best job/college?<br><br>
-Widhya gives you an opportunity to get professional experience in a challenging environment. We not only help you to win the so called race but we help you know your future recruiters. We help students learn certain set of skills which they can use later in their lives and make this world a better place to live in. An internship can develop young individual’s skills and develop their entrepreneurial skills which are one of the most important skills to survive in this world.<br><br>
-Unemployment being an uncovered issue faced by our country, Widhya helps contribute to this issue giving a chance to recent graduates and undergraduates to boom up their skills and help expand their network helping them personally and professionally.<br>
-Our internship programs help ambitious young learners throw themselves into
-challenging roles with a wide range of companies around the world.<br/><br/>
-			</span>
-		</div>
-		<div class="column-right-2">
-			<img src="{{ url_for('static',filename='intro.jpg') }}">
-		</div>
-	</div>
+		</aside>
 
-	<div class="container-maroon">
-		<div class="column-left">
-			<br><br><img src="{{ url_for('static',filename='intro.jpg') }}">
-		</div>
-		<div class="column-right">
-			<center><h1>Widhya For Recruiters</h1></center><br>
-			<span class ="lead">Communicating and choosing candidates through our platform's features will make the whole process faster and efficient. Meet your short-term skills requirement by bringing in young talent from diverse backgrounds in an affordable way.<br><br>
+		<div id="widhya-main">
+			<section id="widhya-hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url(static/images/img_bg_1.jpg)";">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner js-fullheight">
+					   					<div class="desc">
+						   					<h1>Hi! <br>I'm Widhya</h1>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url(static/images/img_bg_2.jpg);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<div class="desc">
+						   					<h1>I am <br>a Change! A change that you all need!</h1>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</section>
 
-<center><h3>NGOs</h3><center>
-Looking for Volunteers for your project?<br>
-Let’s find them together! Reduce your overhead and administration time as we help source talented volunteers from our network.<br><br>
+			<center><h2 style="color:#ffffff"> Lakshya, my pre launch event in </h2></center>
+			<div id="widhya-counter" class="widhya-counters" style="background-image: url(static/images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="widhya-narrow-content">
+					<div class="row">
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-center animate-box">
+							<span class="widhya-counter js-counter" id="timer-days"></span>
+							<span class="widhya-counter-label">Days</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="widhya-counter js-counter" id="timer-hours"></span>
+							<span class="widhya-counter-label">Hours</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="widhya-counter js-counter" id="timer-minutes"></span>
+							<span class="widhya-counter-label">Minutes</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="widhya-counter js-counter" id="timer-seconds"></span>
+							<span class="widhya-counter-label">Seconds</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<center><h3>Start Ups</h3></center>
-Fuel your start up and gain a competitive advantage over your competitors. Provide a fulfilling experience for interns who are passionate to learn and contribute to your venture as much as you are. Boost your workplace culture by bringing in high potential, eager young people, ready to make an impact. <br><br>
+			<section class="widhya-about" data-section="about">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta" style="color:#f9bf3f;">About Us</span>
+										<h2 class="widhya-heading" style="color:white;">How Will Widhya Be With Ya?</h2>
+										<p class="custom-text" style="color:white;"><strong>Hi I'm Widhya!</strong> Widhya is a platform that aims to solve the problem of the near failure of the education system. Focuses on a "<b>Learning By Doing</b>" approach, thereby removing the concept of rote learning. Widhya doesn't judge you based on your marks and grades, but all we that matters is, your quality of work.</p>
+										<p class="custom-text" style="color:white;">The best part is that <b>anybody pursuing any course can choose to learn about and work on any concept</b> on the platform.
+											Learning, in my language, does not mean going through a set of lectures or going to class and
+											listening to your professors speak. Learning, in my language means, to learn while doing and how will that happen you might wonder!
+										</p>
+										<p class="custom-text" style="color:white;">I offer <b>micro-tasks</b> that you could solve and on solving a set of micro-tasks
+										</p>
+										<h2 class="widhya-heading" style="color:white;">What are Micro-Tasks?</h2>
+										<p class="custom-text" style="color:white;">Micro-Tasks are real time industrial projects given to me by various companies. These micro-tasks are small
+											scale problems that you will have to solve in order to complete a <b>Mission</b>. A <b>Mission is a set of micro-tasks</b> and every mission will have some
+											material that you can refer to, incase you get stuck.
+										</p>
+										<p class="custom-text" style="color:white;"> On successfully completing a Mission, <b>I will personally recommend you for an internship</b> at the partner company from whom
+											I got this Mission. Either way, I'll make sure you get a certificate of achievement from my side and the parent company's side!<br/><br/>
+											<b>Sounds great right!?</b>
+										</p>
+										</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-bulb"></i></span>
+										<h3 style="color:white;">Learning By Doing</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-globe-outline"></i></span>
+										<h3 style="color:white;">Diversity In Working Field</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3 style="color:white;">Get Industrial Experience</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3 style="color:white;">Work & Learn At Your Own Pace</h3>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+									<div class="hire">
+										<h2>I am happy to know you <br>that 300+ projects done sucessfully!</h2>
+										<a href="#" class="btn-hire">Hire me</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<center><h3>Companies</h3></center>
-Millennials are bound to dominate half the global workforce by 2020. Adapt to new trends
-and become millennial-friendly. Our talent solutions are always bringing a youthful edge to
-the corporate cultures around the world.<br/><br/>
-			</span>
-		</div>
-	</div>
 
-	<div class="container-white">
-		<div class="column-left-2">
-			<center><h1>Widhya For Students</h1></center><br>
-			<span class="lead">No work experience? No problem, create your experience here.<br>
-Ambitious enough to believe you can make a positive impact in our world? Well, we believe
-you can.<br><br>
-			<ul type="list-style-type:square">
-				<li>We believe in change.</li>
-				<li>We believe in making a difference.</li>
-				<li>We believe in potential and not GPA.</li>
-				<li>We believe in skills not streams.</li>
-				<li>Show off your skills by completing the micro task.</li>
-			</ul>
-			<b><h2>Work on a micro tasks and secure an Internship!</h2></b>
-			
-Micro tasks are missions/levels of work which ensure completion of the project. All our micro tasks are work from home real time industry (micro) projects, which could be completed anytime long with your academic program or during your internship.
 
-Internships
-Searching for the next opportunity to level yourself up and gain professional experience?
-Differentiate yourself through an internship.
-Star up specific : Does a dynamic, fast-paced work environment excite you? Begin your
-entrepreneurial journey with an internship at a startup!<br/><br/>
-			</span>
-		</div>
-		<div class="column-right-2">
-			<img src="{{ url_for('static',filename='intro.jpg') }}">
-		</div>
-	</div>
+			<!--<section class="widhya-services" data-section="services">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">What I do?</span>
+							<h2 class="widhya-heading">Here are some of my expertise</h2>
+						</div>
+					</div>
+					<div class="row row-pt-md">
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-1">
+								<span class="icon">
+									<i class="icon-bulb"></i>
+								</span>
+								<div class="desc">
+									<h3>Innovative Ideas</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-2">
+								<span class="icon">
+									<i class="icon-data"></i>
+								</span>
+								<div class="desc">
+									<h3>Software</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-3">
+								<span class="icon">
+									<i class="icon-phone3"></i>
+								</span>
+								<div class="desc">
+									<h3>Application</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-4">
+								<span class="icon">
+									<i class="icon-layers2"></i>
+								</span>
+								<div class="desc">
+									<h3>Graphic Design</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-5">
+								<span class="icon">
+									<i class="icon-data"></i>
+								</span>
+								<div class="desc">
+									<h3>Software</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-6">
+								<span class="icon">
+									<i class="icon-phone3"></i>
+								</span>
+								<div class="desc">
+									<h3>Application</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
 
-<div class="container-black-full">
-		<center><h1>Our Core Values</h1></center><br>
-		<span class="lead"><center>
-		<h3>Learn Constantly</h3>
-We are inquisitive and curious about everything. Learning is the most important part of our process. We prioritize long term expertise over short term gains.<br><br>
 
-		<h3>Innovate Fearlessly</h3>
-We are not afraid of failure. We embrace challenge. We support and empower each other to go against the status quo.<br><br>
+			<section class="widhya-skills" data-section="skills">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta" style="color:#f9bf3f;">My Specialty</span>
+							<h2 class="widhya-heading animate-box" style="color:white;">How I Wish To Create A Difference</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h2>India Before 2019</h2>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h2>India After Widhya</h2>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Rote Learning</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								    <span>75%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Rote Learning</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								    <span>60%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Learning By Doing</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+								    <span>85%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Learning By Doing</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								    <span>90%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Access To Realtime Industrial<br>Projects</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    <span>70%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3 style="color:white;">Access To Realtime Industrial<br>Projects</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								    <span>80%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-		<h3>Be Data Driven</h3>
-When it can be measured- we measure it. KPIs &gt; vanity metrics. We are always thinking about what data we have and how to use it.<br><br>
+			<section class="widhya-education" data-section="education">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta" style="color:#f9bf3f;">What I'm Capable Of Doing</span>
+							<h2 class="widhya-heading animate-box">Education</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Mission Arts @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6">
+										      			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										      		</div>
+										      		<div class="col-md-6">
+										      			<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+										      		</div>
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Mission Technology @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+													<ul>
+														<li>Separated they live in Bookmarksgrove right</li>
+														<li>Separated they live in Bookmarksgrove right</li>
+													</ul>
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Mission Marketing @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									        </div>
+									    </div>
+									</div>
 
-		<h3>Default to Transparency</h3>
-We value honest and open communication. We communicate relationships, processes and what is going on &quot;behind the scenes&quot;.<br>
-We believe sharing information is the best way to foster transparency in our field.<br><br>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFour">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Mission Business Development @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									        </div>
+									    </div>
+									</div>
 
-		<h3>Take Action</h3>
-We focus on what we can accomplish today. Small wins lead to big success. We take ownership. We see projects through and communicate results.<br><br>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Mission Human Resources @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Mission Engineering @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Mission Everything @ Widhya
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-		<h3>Put Community First</h3>
-We put our communities’ goals first. We talk in terms of their priorities, helping them to discover what they want and how to achieve it. We seek feedback from our<br>community constantly.
-We engage in conversations, not monologues.<br><br>
+			<section class="widhya-experience" data-section="experience">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta" style="color:#f9bf3f;">Experience</span>
+							<h2 class="widhya-heading animate-box" style="color:white;">Work Experience</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
 
-		<h3>Give Warm Fuzzies</h3>
-We support the team. We give both positive and constructive feedback regularly. We share information proactively. We are collaborative and ego-less when<br>
-searching for the best ideas.<br><br>
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
 
-		<h3>Care Intensely</h3>
-We work passionately (but not obsessively… usually). We constantly pursue projects that
-excite us and align with our mission.<br/><br/>
-		</center></span>
-	</div>
+					               <div class="timeline-label">
+					                  <h2><a href="#">Launch Event and Official Launch of Product</a> <span>March 2019</span></h2>
+															<p>The Launch event will mark my official birth as a product since all of you will start using me from then to achieve your dreams.</p>
+												 </div>
+					            </div>
+					         </article>
 
-<script>
-	var countDownDate = new Date("March 1, 2019 00:00:00").getTime();
 
-	var x = setInterval(function() {
-		var now = new Date().getTime();
-		var distance = countDownDate - now;
-		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		document.getElementById("timer").innerHTML = "Widhya will be with ya in <br>" + days + "d " + hours + "h "
-		+ minutes + "m " + seconds + "s ";
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2>Pre Launch Event <span>February 2018</span></h2>
+													<p>The Pre Launch Event aims to get motivated students under one roof and convey the essence of what Widhya is. It's about spreading the word about Widhya and making students understand how Widhya being different from other platforms, can help them achieve their career goals in a faster and more efficient manner.</p>
+												 </div>
+					            </div>
+					         </article>
 
-		// If the count down is over, write some text 
-		if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("timer").innerHTML = "We are live now!";
-		}
-	}, 1000);
-</script>
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2>Product Development, Community Expansion & Understanding Student Problems <span>January 2019 - Present</span></h2>
+													<p>Once this became what Rahul and Rishabh lived for, they decided to start working on building the product. But before they built the product, they wanted to understand how the community might take up their product. Also, they wanted to understand the problems students face in a better manner, so they decided to start interacting directly with the students.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2>Idea Refinement and Constant Feature Addition To Product <span>November 2018 - Present</span></h2>
+													<p>After putting the idea on to paper, Rahul spoke to his roommate, Rishabh, about me and slowly, this became all that Rishabh could think of to. Day in and day out, they thought about how they could make me better and help a larger crowd by giving everyone an equal opportunity.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-5">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2>The Seed Of The Idea Planted In The Head <span>November 2018</span></h2>
+					                  <p>One cold night in the month of November, when Rahul was listening to "In The End" by Linkin Park, I took birth as an idea in his head and slowly this idea took over his whole brain and heart.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+
+			<section class="widhya-work" data-section="work">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta" style="color:#f9bf3f;">How I Work</span>
+							<h2 class="widhya-heading animate-box" style="color:white;">The Team That I Work With</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(static/images/rahul.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Rahul Arulkumaran</a></h3>
+										<span>Co-Founder</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(static/images/rishabh.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Rishabh Singh</a></h3>
+										<span>Co-Founder</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+			</section>
+
+			<!--<section class="widhya-blog" data-section="blog">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Read</span>
+							<h2 class="widhya-heading">Recent Blog</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="static/images/blog-1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by widhya.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Renovating National Gallery</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="static/images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by widhya.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Wordpress for a Beginner</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="static/images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by widhya.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Make website from scratch</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>-->
+
+			<section class="widhya-contact" data-section="contact">
+				<div class="widhya-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta" style="color:#f9bf3f;">Get in Touch</span>
+							<h2 class="widhya-heading">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="widhya-feature widhya-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="widhya-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="widhya-text">
+									<p><a href="#">widhya.org@gmail.com</a></p>
+								</div>
+							</div>
+
+							<div class="widhya-feature widhya-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="widhya-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="widhya-text">
+									<p>Hyderabad</p>
+								</div>
+							</div>
+
+							<div class="widhya-feature widhya-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="widhya-icon">
+									<i class="icon-phone"></i>
+								</div>
+								<div class="widhya-text">
+									<p><a href="tel://">+91 7893798125</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form action="" method="post">
+										{{ form.csrf }}
+										<div class="form-group">
+											{{ form.name(class_="form-control") }}
+										</div>
+										<div class="form-group">
+											{{ form.email(class_="form-control") }}
+										</div>
+										<div class="form-group">
+											{{ form.phone(class_="form-control") }}
+										</div>
+										<div class="form-group">
+											{{ form.foi(class_="form-control") }}
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-send-message" value="Submit">
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end:widhya-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:widhya-page -->
 {% endblock %}
