@@ -17,7 +17,7 @@ def send_mail(users, name, email, ph_num, field):
 	to_email = sendgrid.helpers.mail.Email("widhya.contacts@gmail.com")
 	#print(to_email)
 	subject = str(users) + " User's Contact Details Bruh"
-	content = sendgrid.helpers.mail.Content("text/html", "Hey Widhya, I hope this doesn't get into spam lol! xD <br>Wrote the above thing to escape spam. xD Hope it works dude! <br> The details are mentioned below!<br><br>Request: %s <br>Name of the person is <b>%s</b> <br>Email address is <b>%s</b> <br>Number is <b>%s</b> <br>Field Of Interest is <b>%s</b> <br>"%(users, name, email, ph_num, field))
+	content = sendgrid.helpers.mail.Content("text/html", "<html><body>Hey Widhya, I hope this doesn't get into spam lol! xD <br>Wrote the above thing to escape spam. xD Hope it works dude! <br> The details are mentioned below!<br><br>Request: %s <br>Name of the person is <b>%s</b> <br>Email address is <b>%s</b> <br>Number is <b>%s</b> <br>Field Of Interest is <b>%s</b> <br></body></html>"%(users, name, email, ph_num, field))
 	mail = sendgrid.helpers.mail.Mail(from_email, subject, to_email, content)
 	response = sg.client.mail.send.post(request_body=mail.get())
 	return response
