@@ -122,7 +122,8 @@ figure {
       padding-right: .3em; }
   #widhya-aside #widhya-main-menu {
     display: block;
-    width: 100%; }
+    width: 100%;
+    background: #225c7b; }
     #widhya-aside #widhya-main-menu .collapse {
       display: block !important; }
     #widhya-aside #widhya-main-menu ul {
