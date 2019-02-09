@@ -13,12 +13,13 @@ class ContactForm(Form):
 
 def send_mail(users, name, email, ph_num, field):
 	sg = sendgrid.SendGridAPIClient(apikey = os.environ.get("SG_API_KEY"))
-	from_email = sendgrid.helpers.mail.Email("rahulkumaran313@gmail.com", name="Rahul Arulkumaran")
+	from_email = sendgrid.helpers.mail.Email("widhya.org@gmail.com", name="Widhya Org")
 	#print(subject_given.split("-")[0])
-	to_email = sendgrid.helpers.mail.Email("widhya.contacts@gmail.com")
+	to_email = sendgrid.helpers.mail.Email("rahuldravid313@gmail.com")
 	#print(to_email)
-	subject = str(users) + " User's Contact Details Bruh"
-	content = sendgrid.helpers.mail.Content("text/html", "<html><body>Hey Widhya, I hope this doesn't get into spam lol! xD <br>Wrote the above thing to escape spam. xD Hope it works dude! <br> The details are mentioned below!<br><br>Request: %s <br>Name of the person is <b>%s</b> <br>Email address is <b>%s</b> <br>Number is <b>%s</b> <br>Field Of Interest is <b>%s</b> <br></body></html>"%(users, name, email, ph_num, field))
+	subject = "Subscribers List "
+	mail_content = "Name : <b>%s</b> <br>Email ID : <b>%s</b> <br>Number : <b>%s</b> <br>Field Of Interest : <b>%s</b> <br>"%(name, email, ph_num, field)
+	content = sendgrid.helpers.mail.Content("text/html", "<html><body><p>Thanks for actually using this particular thingy. I hope you're doing good! Thank those who actually agreed to use this particular website.</p> <br> <pre>%s</pre></body></html>"%(mail_content))
 	mail = sendgrid.helpers.mail.Mail(from_email, subject, to_email, content)
 	response = sg.client.mail.send.post(request_body=mail.get())
 	return response
@@ -38,6 +39,7 @@ def index():
 			global users
 			users += 1
 			response = send_mail(users, request.form['name'],request.form['email'],request.form['phone'],request.form['foi'])
+			return redirect(url_for("index"))
 	return render_template("index.html", form=form)
 
 
