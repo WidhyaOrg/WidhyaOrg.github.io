@@ -445,9 +445,10 @@ body.offcanvas {
     line-height: 1.5; }
   .hire .btn-hire {
     color: #000;
+    background-color: #2c98f0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    bordeR: 1px solid #000;
+    bordeR: 4px solid blue;
     padding: 2px 10px; }
 
 .fancy-collapse-panel .panel-default > .panel-heading {
