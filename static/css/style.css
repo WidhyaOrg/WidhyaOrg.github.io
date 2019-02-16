@@ -93,7 +93,8 @@ figure {
       -ms-transform: translateX(-300px);
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
-      padding-top: 4em; } }
+      padding-top: 4em; 
+	  background: #225c7b;} }
   #widhya-aside .author-img {
     width: 150px;
     height: 150px;
@@ -107,14 +108,16 @@ figure {
     display: block;
     margin-bottom: 2em;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+	background: #225c7b;}
   #widhya-aside #widhya-logo {
     text-align: center;
     font-weight: 700;
     font-size: 22px;
     margin-bottom: .5em;
     display: block;
-    width: 100%; }
+    width: 100%;
+	background: #225c7b; }
     #widhya-aside #widhya-logo a {
       display: block;
       text-align: center;
@@ -125,14 +128,17 @@ figure {
     width: 100%;
     background: #225c7b; }
     #widhya-aside #widhya-main-menu .collapse {
-      display: block !important; }
+      display: block !important;
+	  background-color: #225c7b; }
     #widhya-aside #widhya-main-menu ul {
       text-align: center;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+	  background: #225c7b; }
       @media screen and (max-width: 768px) {
         #widhya-aside #widhya-main-menu ul {
-          margin: 0 0 2em 0; } }
+          margin: 0 0 2em 0;
+		  background: #225c7b; } }
       #widhya-aside #widhya-main-menu ul li {
         margin: 0 0 10px 0;
         padding: 0;
