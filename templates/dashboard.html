@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="left-column">
+  <img class="profile-pic" src="{{ url_for('static', filename='images/profile.jpg')}}">
+  <h4 class="firstname">{{ firstname }} Firstname</<h4>
+  <h4 class="lastname">{{ lastname }} Lastname</h4>
+  <p class="bio">
+    <span class="glyphicon glyphicon-map-marker college"> {{ college }} College</span><br/>
+    <span class="glyphicon glyphicon-home location">{{ city }} City</span>
+  </p>
+  <button class="button"><span>Resume </span></button>
+</div>
+
+<div class="right-column">
+
+  <center>
+    <h1 class="welcome">Welcome To Your Dashboard, Rahul  {{ firstname }}!</h1>
+  </center>
+
+  <div class="inner-left">
+    <h2>On Going Missions</h2>
+    <ul class="ongoing">
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+    </ul>
+  </div>
+
+  <div class="inner-right">
+    <h2>Completed Missions</h2>
+    <ul class="completed">
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+      <a href="#"><li>Mission-1</li></a>
+    </ul>
+  </div>
+
+
+  <div class="notes-container">
+    <h2>Your Notes</h2>
+    <ul class="notes">
+      <li class="single-note">
+        <a class="note-link" href="#">
+          <u><h6 class="note-1">1</h6></u>
+          <h2 class="note-title-1"></h2>
+          <p class="note-content-1"></p>
+        </a>
+      </li>
+      <li class="single-note">
+        <a class="note-link" href="#">
+          <u><h6 class="note-2">2</h6></u>
+          <h2 class="note-title-2"></h2>
+          <p class="note-content-2"></p>
+        </a>
+      </li>
+      <li class="single-note">
+        <a class="note-link" href="#">
+          <u><h6 class="note-3">3</h6></u>
+          <h2 class="note-title-3"></h2>
+          <p class="note-content-3"></p>
+        </a>
+      </li>
+      <li class="single-note">
+        <a class="note-link" href="#">
+          <u><h6 class="note-4">4</h6></u>
+          <h2 class="note-title-4"></h2>
+          <p class="note-content-4"></p>
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="note-update">Update Your Notes</h2>
+
+    <div class="noteform">
+
+      <form action="" method="post" onsubmit="return(validate())">
+        <input id='note-num' placeholder="Which note would you want to change? Enter the note number!" type="text" />
+        <input id='update-title' placeholder="Update Note Title" type="text" required />
+        <input id='update-content' placeholder="Update Note Content" type="text" required />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<p id="temp"></p>
+
+
+<script type="text/javascript">
+  function validate() {
+
+    var num = document.getElementById('note-num').value ;
+    var title = "note-title-" + num;
+    var content = "note-content-" + num ;
+
+    console.log(num)
+    console.log(title)
+    console.log(content)
+    document.getElementByClassName(title).innerHTML = document.getElementById('update-title').value ;
+    document.getElementByClassName(content).innerHTML = document.getElementById('update-content').value ;
+    document.getElementById('temp').innerHTML = "HELLLLOOOO" ;
+  }
+</script>
+
+{% endblock %}

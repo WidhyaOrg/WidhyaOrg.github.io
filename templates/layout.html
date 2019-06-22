@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Widhya</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Widhya is an edutech startup that focuses to remove the concept of rote learning while focusing on a learning by doing approach by giving students the liberty to work on real time projects in a field of their choice and making them industry ready." />
+	<meta name="keywords" content="edutech, industry projects, startup, widhya, internships, learning platform, learning by doing" />
+	<meta name="author" content="Widhya" />
+
+  <!-- Facebook and Twitter integration -->
+	<!--<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />-->
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+	<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/widhyablack.png') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+	<![endif]-->
+
+	</head>
+	<body style="background-color: #399BFF;font-family: 'Montserrat', sans-serif;">
+
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <img class="top-logo" src="{{ url_for('static', filename='images/widhyawhite.png')}}">
+		    </div>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="{{ url_for('browse_missions') }}"><span class="glyphicon glyphicon-user"></span> Browse Missions</a></li>
+		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Active Missions</a></li>
+		      <li><a href="{{ url_for('dashboard', username='rahulkumaran') }}"><span class="glyphicon glyphicon-log-in"></span> Dashboard</a></li>
+		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+		    </ul>
+		  </div>
+		</nav>
+
+{% block body %}{% endblock %}
+
+
+	</body>
+</html>
