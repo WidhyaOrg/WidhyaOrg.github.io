@@ -1,15 +1,7 @@
 from flask import Flask, render_template, flash, request, redirect, url_for, session
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 import sendgrid
 import os
-
-users = 0
-
-class ContactForm(Form):
-	name = TextField('Full Name', validators=[validators.DataRequired()], render_kw={"placeholder": "Name"})
-	email = TextField('Email ID', validators=[validators.DataRequired()], render_kw={"placeholder": "Email"} )
-	phone = TextField('Phone Number', validators=[validators.DataRequired()], render_kw={"placeholder": "Phone Number"})
-	foi = TextField('Field Of Interest', validators=[validators.DataRequired()], render_kw={"placeholder": "Field Of Interest"})
+from forms import *
 
 def send_mail(users, name, email, ph_num, field):
 	sg = sendgrid.SendGridAPIClient(apikey = os.environ.get("SG_API_KEY"))
@@ -31,17 +23,24 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET','POST'])
 def index():
-	form = ContactForm(request.form)
-	if(request.method == 'POST'):
-		if(form.validate()):
-			global users
-			users += 1
-			response = send_mail(users, request.form['name'],request.form['email'],request.form['phone'],request.form['foi'])
-			return redirect(url_for("index"))
-	return render_template("index.html", form=form)
+	return redirect(url_for('browse_missions'))
 
+@app.route("/<string:username>", methods=['GET', 'POST'])
+def dashboard(username):
+	print(username)
+	return render_template("dashboard.html")
+
+@app.route("/browse-missions", methods=['GET', 'POST'])
+def browse_missions():
+	form = MissionSearchForm(request.form)	#Gets mission form
+	if(request.method == 'POST'):	#If form submitted
+		#print(form.validate())
+		if(form.validate()):
+			print("\"" + request.form['mission']+ "\"")	#Gives value entered in search field
+			return render_template("browse_missions.html", form=form)
+	return render_template("browse_missions.html", form=form)
 
 '''@app.errorhandler(404)
 def not_found(e):
