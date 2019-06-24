@@ -1,0 +1,51 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+
+background-color: #399BFF;
+}
+
+
+
+.lock {
+color:rgb(139,0,139);
+}
+svg {
+fill: currentColor;
+}
+
+.ok {
+position:absolute;
+border: 3px solid red;
+bottom:0;
+}
+
+
+
+body {
+background: linear-gradient(58deg, #4e2f8f, #ec5d9e, #fad159, #76c3d0, #6a4b9e);
+background-size: 1000% 1000%;
+
+-webkit-animation: AnimationName 55s ease infinite;
+-moz-animation: AnimationName 55s ease infinite;
+animation: AnimationName 55s ease infinite;
+
+
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
