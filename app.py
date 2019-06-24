@@ -47,6 +47,18 @@ def not_found(e):
 	return render_template("404.html")
 '''
 
+@app.route("/solvemicrotask",methods=['GET','POST'])
+def main():
+	return render_template("solvemicrotask.html")
+@app.route("/companydashboard",methods=['GET','POST'])
+def companydashboard():
+	return render_template("companydashboard.html")
+@app.route("/uploadmicrotask",methods=['GET','POST'])
+def uploadmicrotask():
+	return render_template("uploadmicrotask.html")
+@app.route("/opportunity",methods=['GET','POST'])
+def opportunity():
+	return render_template("opportunity.html")
 @app.errorhandler(500)
 def application_error(e):
 	return 'Sorry, unexpected error: {}'.format(e), 500
