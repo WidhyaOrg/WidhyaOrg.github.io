@@ -24,12 +24,19 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 	<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	-->
+
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/widhyablack.png') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	 -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<script src="https://kit.fontawesome.com/049028acd6.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
@@ -38,21 +45,25 @@
 	</head>
 	<body style="background-color: #399BFF;font-family: 'Montserrat', sans-serif;">
 
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-expand-sm bg-dark">
 		  <div class="container-fluid">
-		    <div class="navbar-header">
+		    <div class="navbar-brand">
+					<a href="{{url_for('companydashboard')}}">
 		      <img class="top-logo" src="{{ url_for('static', filename='images/widhyawhite.png')}}">
-		    </div>
+				   </a>
+				</div>
 		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="{{ url_for('browse_missions') }}"><span class="glyphicon glyphicon-user"></span> Browse Missions</a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Active Missions</a></li>
-		      <li><a href="{{ url_for('dashboard', username='rahulkumaran') }}"><span class="glyphicon glyphicon-log-in"></span> Dashboard</a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+		      <li class="nav-item" ><a href="{{ url_for('browse_missions') }}" class="nav-link" style="color:white !important;"><span class="fas fa-user"></span> Browse Missions</a></li>
+		      <li class="nav-item"><a href="#" class="nav-link" style="color:white !important;"><span class="fas fa-sign-in-alt"></span> Active Missions</a></li>
+		      <li class="nav-item"><a href="{{ url_for('dashboard', username='rahulkumaran') }}" class="nav-link" style="color:white !important;"><span class="fas fa-sign-in-alt"></span> Dashboard</a></li>
+		      <li class="nav-item"><a href="#" class="nav-link" style="color:white !important;"><span class="fas fa-sign-in-alt" ></span> Sign Out</a></li>
 		    </ul>
 		  </div>
 		</nav>
-
-{% block body %}{% endblock %}
+	
+		
+{% block body %}
+{% endblock %}
 
 
 	</body>
