@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1 class="text-center mt-4 ">Browse Your Missions</h1>
+<form class="col-sm-10 mx-auto mt-4 ">
+  <div class="form-group row ">
+
+             <div class="col-sm-9">
+                  <input type="text" class="form-control" id="staticMission" placeholder="Enter the field you are looking to get better at">
+             </div>
+ <button class="btn btn-success col-sm-3" type="submit">Submit</button>
+  </div>
+</form>
+
+<div class="row ml-3">
+
+<div class="card  mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/googlelogo.png')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card  mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/applelogo.png')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/facebooklogo.png')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{url_for('static',filename='images/amazonlogo.png') }}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{url_for('static',filename='images/microsoftlogo.jpg')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{url_for('static',filename='images/localelogo.png')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <img src="{{url_for('static',filename='images/discordlogo.png')}}" class="card-img-top" alt="..." style="height:250px !important;width:250px !important;">
+  <div class="card-body">
+    <h5 class="card-title">Mission Name</h5>
+    <p class="card-text">Some quick example text to build on the mission highlights and make up the bulk of the mission's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+{% endblock %}
+
