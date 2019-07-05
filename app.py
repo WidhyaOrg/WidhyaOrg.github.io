@@ -59,6 +59,14 @@ def uploadmicrotask():
 @app.route("/opportunity",methods=['GET','POST'])
 def opportunity():
 	return render_template("opportunity.html")
+
+@app.route("/login",methods=['GET','POST'])
+def login():
+	return render_template("login.html")
+
+@app.route("/signup",methods=['GET','POST'])
+def signup():
+	return render_template("signup.html")
 @app.errorhandler(500)
 def application_error(e):
 	return 'Sorry, unexpected error: {}'.format(e), 500
