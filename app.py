@@ -44,11 +44,11 @@ def index():
 
 
 @app.route("/rahul", methods=['GET', 'POST'])
-def rahul():
+def Rahul_Widhya_VisitingCard():
 	return send_file("docs/Rahul_VisitingCard.pdf")
 
 @app.route("/rishabh", methods=['GET', 'POST'])
-def rishabh():
+def Rishabh_Widhya_VisitingCard():
 	return send_file("docs/Rishabh_VisitingCard.pdf")
 
 '''@app.errorhandler(404)
