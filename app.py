@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request, redirect, url_for, session
+from flask import Flask, render_template, flash, request, redirect, url_for, session, send_file
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 import sendgrid
 import os
@@ -42,6 +42,14 @@ def index():
 			return redirect(url_for("index"))
 	return render_template("index.html", form=form)
 
+
+@app.route("/rahul", methods=['GET', 'POST'])
+def rahul():
+	return send_file("docs/Rahul_VisitingCard.pdf")
+
+@app.route("/rishabh", methods=['GET', 'POST'])
+def rishabh():
+	return send_file("docs/Rishabh_VisitingCard.pdf")
 
 '''@app.errorhandler(404)
 def not_found(e):
