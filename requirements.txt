@@ -1,5 +1,5 @@
 Flask==1.0.2
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 WTForms==2.2.1
 sendgrid==5.6.0
 gunicorn==19.9.0
